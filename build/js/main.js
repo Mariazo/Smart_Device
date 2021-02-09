@@ -1,18 +1,18 @@
 'use strict';
 
-(function () {
+(function() {
   var accordionElements = document.querySelectorAll('.accordion');
 
-  Array.prototype.forEach.call(accordionElements, function (accordion) {
+  Array.prototype.forEach.call(accordionElements, function(accordion) {
     var accordionButton = accordion.querySelector('.accordion__button');
 
     accordion.classList.add('accordion_closed');
-    accordionButton.addEventListener('click', function () {
+    accordionButton.addEventListener('click', function() {
       onAccordionButtonClick(accordion);
     });
   });
 
-  var onAccordionButtonClick = function (accordion) {
+  var onAccordionButtonClick = function(accordion) {
     accordion.classList.toggle('accordion_closed');
     accordion.classList.toggle('accordion_opened');
   };
@@ -22,11 +22,11 @@
 
 'use strict';
 
-(function () {
+(function() {
   var maskedInputs = document.querySelectorAll('input[data-mask]');
 
-  var setMask = function (input) {
-    Array.prototype.forEach.call(maskedInputs, function (input) {
+  var setMask = function(input) {
+    Array.prototype.forEach.call(maskedInputs, function(input) {
       var maskOption = {
         mask: input.getAttribute('data-mask')
       };
@@ -39,7 +39,7 @@
 
 'use strict';
 
-(function () {
+(function() {
   var KEYCODE_ESC = 27;
 
   var modal = document.querySelector('.modal');
@@ -50,47 +50,53 @@
   var modalOpenButton = document.querySelector('.page-header__callback-button');
   var modalCloseButton = modal.querySelector('.modal__close');
 
+  var element = document.getElementById('elementId');
+
   var isStorageSupport = true;
   var dataStorage = {};
 
 
-  var openModal = function () {
-    document.body.classList.toggle('no-scroll');
-    modal.classList.toggle('modal_show');
-    modal.addEventListener('click', onModalClick);
-    modalCloseButton.addEventListener('click', onModalCloseButtonClick);
-    modalForm.addEventListener('submit', onModalFormSubmit);
-    document.addEventListener('keydown', onModalEscPress);
+  var openModal = function() {
+    if (typeof(element) != 'undefined' && element != null) {
+      document.body.classList.toggle('no-scroll');
+      modal.classList.toggle('modal_show');
+      modal.addEventListener('click', onModalClick);
+      modalCloseButton.addEventListener('click', onModalCloseButtonClick);
+      modalForm.addEventListener('submit', onModalFormSubmit);
+      document.addEventListener('keydown', onModalEscPress);
+    }
   };
 
-  var closeModal = function () {
-    document.body.classList.toggle('no-scroll');
-    modal.classList.toggle('modal_show');
-    modal.removeEventListener('click', onModalClick);
-    modalCloseButton.removeEventListener('click', onModalCloseButtonClick);
-    modalForm.removeEventListener('submit', onModalFormSubmit);
-    document.removeEventListener('keydown', onModalEscPress);
+  var closeModal = function() {
+    if (typeof(element) != 'undefined' && element != null) {
+      document.body.classList.toggle('no-scroll');
+      modal.classList.toggle('modal_show');
+      modal.removeEventListener('click', onModalClick);
+      modalCloseButton.removeEventListener('click', onModalCloseButtonClick);
+      modalForm.removeEventListener('submit', onModalFormSubmit);
+      document.removeEventListener('keydown', onModalEscPress);
+    }
   };
 
-  var onModalClick = function (evt) {
+  var onModalClick = function(evt) {
     if (evt.target === modal) {
       closeModal();
     }
   };
 
-  var onModalCloseButtonClick = function (evt) {
+  var onModalCloseButtonClick = function(evt) {
     evt.preventDefault();
     closeModal();
   };
 
-  var onModalEscPress = function (evt) {
+  var onModalEscPress = function(evt) {
     if (evt.keyCode === KEYCODE_ESC) {
       evt.preventDefault();
       closeModal();
     }
   };
 
-  var onModalFormSubmit = function () {
+  var onModalFormSubmit = function() {
     if (isStorageSupport) {
       localStorage.setItem('name', modalName.value);
       localStorage.setItem('phone', modalPhone.value);
@@ -106,7 +112,7 @@
     isStorageSupport = false;
   }
 
-  modalOpenButton.addEventListener('click', function (evt) {
+  modalOpenButton.addEventListener('click', function(evt) {
     evt.preventDefault();
     openModal();
 

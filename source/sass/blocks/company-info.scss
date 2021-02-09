@@ -1,22 +1,17 @@
 .company-info {
   position: relative;
-
   max-width: 1920px;
   margin: 0 auto;
-
   background-color: $background-color_primary;
 
-  &::before,
-  &::after {
+  &::after,
+  &::before {
     content: "";
-
     z-index: 1;
     position: absolute;
-
     width: 637px;
     height: 640px;
-
-    background-image: url('../img/triangle-dotted_gray.svg');
+    background-image: url("../img/triangle-dotted_gray.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
@@ -25,21 +20,18 @@
   &::before {
     bottom: 56px;
     right: 76.2%;
-
     transform: rotate(-150deg);
-
   }
 
-    &::after {
+  &::after {
     bottom: 350px;
     left: 35.2%;
-    
   }
 }
 
 @media (max-width: $max-width_tablet) {
   .company-info {
-    &:before {
+    &::before {
       display: none;
     }
 

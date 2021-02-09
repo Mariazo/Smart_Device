@@ -1,32 +1,25 @@
 // colors
 $black: #000000;
-
 $white: #ffffff;
 $white_light: #fafafa;
-
 $blue_light: #00b2ff;
 $blue_dark: #1b2d37;
-
 $gray_light: #c4c4c4;
 $gray_lighter: #cdcdcd;
 $gray_dark: #666666;
 $gray_blueish: #626269;
-
 // color pallete
 $background-color_primary: $white;
 $background-color_secondary: $blue_dark;
 $background-color_accent: $blue_light;
 $background-color_footer: $white_light;
-
 $text-color_primary: $gray_dark;
 $text-color_secondary: $white;
 $text-color_accent: $blue_light;
 $text-color_footer: $blue_dark;
-
 // fonts
 $font-family_primary: "PT Mono", "Courier New", monospace;
 $font-family_secondary: "Roboto Condensed", "Arial", sans-serif;
-
 $font-size_xxxxl: 80px;
 $font-size_xxxl: 60px;
 $font-size_xxl: 40px;
@@ -34,7 +27,6 @@ $font-size_xl: 22px;
 $font-size_l: 20px;
 $font-size_m: 16px;
 $font-size_s: 14px;
-
 $line-height_xxxxl: 94px;
 $line-height_xxxl: 70px;
 $line-height_xxl: 47px;
@@ -42,11 +34,9 @@ $line-height_xl: 34px;
 $line-height_l: 30px;
 $line-height_m: 22px;
 $line-height_s: 16px;
-
 // breakpoints
 $max-width_mobile: 767px;
 $max-width_tablet: 1023px;
-
 // retina
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
@@ -55,6 +45,7 @@ $retina-dppx: 1.5dppx;
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -64,6 +55,7 @@ $retina-dppx: 1.5dppx;
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(-360deg);
   }

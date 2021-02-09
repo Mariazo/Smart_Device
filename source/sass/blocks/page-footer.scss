@@ -1,21 +1,18 @@
 .page-footer {
   position: relative;
-
   flex-shrink: 0;
   padding-top: 65px;
 
   @include font($font-family_primary, 15px, 400, 25px);
   color: rgba($text-color_footer, 0.5);
-
   background: $background-color_footer;
 
   a {
     color: inherit;
-
   }
 
-  a:hover,
-  a:focus {
+  a:focus,
+  a:hover {
     color: $text-color_accent;
   }
 
@@ -28,7 +25,6 @@
   position: relative;
 
   @include container_desktop;
-
   display: flex;
   flex-wrap: wrap;
 }
@@ -41,14 +37,11 @@
 
   &::after {
     content: "";
-
     position: absolute;
     bottom: 0;
-    left: calc(-50vw + 50%);
-
+    left: calc(50% - 50vw);
     width: 100vw;
     height: 1px;
-
     background-color: $gray_blueish;
     opacity: 0.2;
   }
@@ -62,9 +55,8 @@
   display: block;
   margin-bottom: 53px;
 
-
-  &[href]:hover,
-  &[href]:focus {
+  &[href]:focus,
+  &[href]:hover {
     opacity: 0.7;
   }
 
@@ -83,8 +75,7 @@
   margin-bottom: 60px;
 
   h3 {
-    margin: 0;
-    margin-bottom: 25px;
+    margin: 0 0 25px;
 
     @include font($font-family_secondary, 15px, 400, $line-height_s);
     color: $text-color_footer;
@@ -94,7 +85,6 @@
 
   a {
     display: block;
-
     font-size: 15px;
     line-height: 25px;
   }
@@ -114,7 +104,6 @@
   align-content: space-between;
   min-width: 425px;
   max-height: 100px;
-
   writing-mode: vertical-lr;
 
   @include list-reset;
@@ -140,7 +129,6 @@
   align-items: center;
   width: 100%;
   padding: 14px 0;
-
   font-size: 13px;
   line-height: 24px;
   text-transform: uppercase;
@@ -148,13 +136,11 @@
 }
 
 .page-footer__copyright {
-  margin: 0;
-  margin-right: 5%;
+  margin: 0 5% 0 0;
 }
 
 .page-footer__years {
-  margin: 0;
-  margin-right: 10%;
+  margin: 0 10% 0 0;
 }
 
 .page-footer__privacy-link {
@@ -162,7 +148,6 @@
 }
 
 @media (max-width: $max-width_tablet) {
-
   .page-footer {
     padding-top: 0;
   }
@@ -190,20 +175,16 @@
 
   .page-footer__item-list {
     position: relative;
-
     width: 100%;
     padding: 38px 0;
 
     &::before {
       content: "";
-
       position: absolute;
       top: 0;
-      left: calc(-50vw + 50%);
-
+      left: calc(50% - 50vw);
       width: 100vw;
       height: 1px;
-
       background-color: $gray_blueish;
       opacity: 0.2;
     }
@@ -226,7 +207,6 @@
     flex-direction: column;
     min-width: 100%;
     max-height: 100%;
-
     writing-mode: horizontal-tb;
 
     li:nth-of-type(n+5) {
@@ -245,10 +225,8 @@
 
   .page-footer__years {
     position: absolute;
-
     top: 36px;
     right: 209px;
-
     margin-right: 0;
   }
 }
@@ -294,21 +272,18 @@
 
     &::after {
       content: "";
-
       position: absolute;
       bottom: 0;
-      left: calc(-50vw + 50%);
-
+      left: calc(50% - 50vw);
       width: 100vw;
       height: 1px;
-
       background-color: $gray_blueish;
       opacity: 0.2;
     }
   }
 
-  .page-footer__navigation,
-  .page-footer__contacts {
+  .page-footer__contacts,
+  .page-footer__navigation {
     padding-bottom: 30px;
   }
 
