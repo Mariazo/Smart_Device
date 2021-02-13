@@ -57,25 +57,21 @@
 
 
   var openModal = function() {
-    if (typeof(element) != 'undefined' && element != null) {
       document.body.classList.toggle('no-scroll');
       modal.classList.toggle('modal_show');
       modal.addEventListener('click', onModalClick);
       modalCloseButton.addEventListener('click', onModalCloseButtonClick);
       modalForm.addEventListener('submit', onModalFormSubmit);
       document.addEventListener('keydown', onModalEscPress);
-    }
   };
 
   var closeModal = function() {
-    if (typeof(element) != 'undefined' && element != null) {
       document.body.classList.toggle('no-scroll');
       modal.classList.toggle('modal_show');
       modal.removeEventListener('click', onModalClick);
       modalCloseButton.removeEventListener('click', onModalCloseButtonClick);
       modalForm.removeEventListener('submit', onModalFormSubmit);
       document.removeEventListener('keydown', onModalEscPress);
-    }
   };
 
   var onModalClick = function(evt) {
