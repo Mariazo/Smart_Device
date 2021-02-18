@@ -1,7 +1,7 @@
 .page-footer {
   position: relative;
   flex-shrink: 0;
-  padding-top: 65px;
+  padding-top: 60px;
 
   @include font($font-family_primary, 15px, 400, 25px);
   color: rgba($text-color_footer, 0.5);
